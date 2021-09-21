@@ -10,7 +10,11 @@ import { Observable } from 'rxjs';
 })
 export class AgTableComponent implements OnInit {
   @ViewChild('agGrid') agGrid: AgGridAngular;
+  gridOptions = {
+    pagination: true,
+    paginationPageSize: 3
 
+  }
   columnDefs = [
     {
       field: 'make', sortable: true, filter: 'agSetColumnFilter', filterParams: {
@@ -68,14 +72,20 @@ export class AgTableComponent implements OnInit {
     this.rowData = [
       { "make": "Toyota", "model": "Celica", "price": 35000, "date": "20/09/2021" },
       { "make": "Ford", "model": "Mondeo", "price": 32000, "date": "19/09/2021" },
-      { "make": "Porsche", "model": "Boxter", "price": 72000, "date": "21/09/2021" }
+      { "make": "Porsche", "model": "Boxter", "price": 72000, "date": "21/09/2021" },
+      { "make": "MG", "model": "Celica", "price": 35000, "date": "20/09/2021" },
+      { "make": "Suzuki", "model": "Mondeo", "price": 32000, "date": "19/09/2021" },
+      { "make": "TATA", "model": "Boxter", "price": 72000, "date": "21/09/2021" }
     ]
   }
   reset() {
     this.rowData = [
       { "make": "Toyota", "model": "Celica", "price": 35000, "date": "20/09/2021" },
       { "make": "Ford", "model": "Mondeo", "price": 32000, "date": "19/09/2021" },
-      { "make": "Porsche", "model": "Boxter", "price": 72000, "date": "21/09/2021" }
+      { "make": "Porsche", "model": "Boxter", "price": 72000, "date": "21/09/2021" },
+      { "make": "MG", "model": "Celica", "price": 35000, "date": "20/09/2021" },
+      { "make": "Suzuki", "model": "Mondeo", "price": 32000, "date": "19/09/2021" },
+      { "make": "TATA", "model": "Boxter", "price": 72000, "date": "21/09/2021" }
     ]
   }
 
