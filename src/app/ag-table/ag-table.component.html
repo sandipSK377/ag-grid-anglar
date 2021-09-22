@@ -4,6 +4,6 @@
     <button class="btn btn-primary mb-3" (click)="getSelectedRows()">Get Selected Rows</button>
     <button type="button" class="btn btn-danger ml-3 mb-3" (click)="reset()">Reset</button>
     <ag-grid-angular #agGrid style="width: 100%; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
-        [columnDefs]="columnDefs" rowSelection="multiple" [gridOptions]="gridOptions">
+        [columnDefs]="columnDefs" rowSelection="multiple" [animateRows]="true" [gridOptions]="gridOptions">
     </ag-grid-angular>
 </div>
