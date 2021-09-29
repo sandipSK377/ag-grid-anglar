@@ -33,6 +33,11 @@ function actionCellRenderer(params) {
   styleUrls: ['./ag-table.component.scss']
 })
 export class AgTableComponent implements OnInit {
+  // custom modal logic
+  modal: boolean = false;
+
+  // custom modal logic end
+
   @ViewChild('agGrid') agGrid: AgGridAngular;
   gridOptions = {
     pagination: true,
@@ -161,6 +166,16 @@ export class AgTableComponent implements OnInit {
     }
   }
 
+
+  // custom modal 
+  openModal() {
+    this.modal = true;
+  }
+  onClickBackDrop() {
+    alert('ss')
+    let el = document.getElementById('modal-p');
+    el.style.zIndex = '3000';
+  }
 
 }
 

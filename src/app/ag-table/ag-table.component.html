@@ -3,8 +3,23 @@
 
     <button class="btn btn-primary mb-3" (click)="getSelectedRows()">Get Selected Rows</button>
     <button type="button" class="btn btn-danger ml-3 mb-3" (click)="reset()">Reset</button>
+    <button type="button" class="btn btn-success" style="float: right;" (click)="openModal()">Custom Modal</button>
     <ag-grid-angular #agGrid style="width: 100%; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
         [columnDefs]="columnDefs" rowSelection="multiple" [animateRows]="true" [gridOptions]="gridOptions"
         (cellClicked)="onCellClicked($event)">
     </ag-grid-angular>
+</div>
+
+<div id="modalBackdrop" class="backdrop" [ngClass]="{'show':modal}" (click)="onClickBackDrop()"></div>
+
+<div id="modal-p" class="modal-b" [ngClass]="{'show':modal}">
+    <div class="modal-dialog-b">
+        <div class="modal-content-b">
+            <h4>Hello this is custom modal</h4>
+            <hr />
+            <p>This modal is created wwithout any library.</p>
+            <p>Thanks you very much</p>
+            <button type="button" class="mt-4 btn btn-danger" (click)="modal=false;">Close Modal</button>
+        </div>
+    </div>
 </div>

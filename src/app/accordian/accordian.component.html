@@ -1,0 +1,13 @@
+<div class="container pt-4">
+    <h4>Acordian</h4>
+    <hr>
+    <button type="button" class="btn btn-primary mt-3 mb-3" (click)="toggleAll()">Toggle</button>
+    <div class="card" *ngFor="let data of tableData">
+        <div class="card-header" (click)="toogleCollapse(data.id)">
+            {{data.head}}
+        </div>
+        <div class="card-body" [hidden]="flagId != data.id">
+            {{data.text}}
+        </div>
+    </div>
+</div>

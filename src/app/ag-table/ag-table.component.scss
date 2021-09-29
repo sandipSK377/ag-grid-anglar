@@ -1,0 +1,45 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: .5;
+    display: none;
+}
+.modal-b {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2001;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+.modal-dialog-b {
+    position: relative;
+    max-width: 500px;
+    margin: 1.75rem auto;
+    pointer-events: none;
+    .modal-content-b {
+        padding: 2rem;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        outline: 0;
+    }
+}
+.show{
+    display: block !important;
+}
